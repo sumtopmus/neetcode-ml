@@ -12,7 +12,7 @@ class Solution:
     def average(self, to_avg: TensorType[float]) -> TensorType[float]:
         # Compute column-wise mean (average across rows)
         # Use torch.mean(tensor, dim=0)
-        return torch.mean(to_avg, dim=0)
+        return to_avg.mean(dim=0)
 
     def concatenate(self, cat_one: TensorType[float], cat_two: TensorType[float]) -> TensorType[float]:
         # Join two tensors side-by-side along dim=1
