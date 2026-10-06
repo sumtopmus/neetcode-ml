@@ -12,4 +12,4 @@ class Solution:
         # return np.round(your_answer, 5)
         for w, b in zip(weights[:-1], biases[:-1]):
             x = np.maximum(0.0, w.T @ x + b)
-        return weights[-1].T @ x + biases[-1]
+        return np.round(weights[-1].T @ x + biases[-1], 5)
